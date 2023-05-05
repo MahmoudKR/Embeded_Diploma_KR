@@ -1,0 +1,139 @@
+Question (1):
+---------------
+#include <stdio.h>
+#include <stdlib.h>
+
+void knowprime(int a)
+{
+	int r,i,c;
+	c=a;
+	for  (i = --a ;i>1;i--)
+	{	r=0;
+		r = c%i;
+		if(r ==0)
+			break;
+	}
+
+	if (r!=0)
+		printf("%d ",c);
+}
+
+int main()
+
+{	int i1,i2,bg,sm;
+	printf("This code gets all Prime numbers within input range\n");
+	printf("Please enter the 1st Number\n");
+	fflush(stdin);fflush(stdout);
+	scanf("%d",&i1);
+	printf("Please enter the 2nd Number\n");
+	fflush(stdin);fflush(stdout);
+	scanf ("%d",&i2);
+
+	if (i2>i1)
+	{
+		bg=i2;
+		sm=i1;
+	}
+	else
+	{
+		bg=i1;
+		sm=i2;
+	}
+
+	for (int i =bg;i>=sm;i--)
+		knowprime (i);
+
+return 0;
+}
+--------------------------------------------------------------------------------
+
+Question (2):
+--------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int factorial(int a)
+{int f=1;
+	if (a>0)
+		{
+			f= a * factorial(a-1);
+		}
+return f;
+
+}
+
+int main()
+
+{	int x;
+	printf("This code gets the Factorial of a number\n");
+	printf("Please enter the Number\n");
+	fflush(stdin);fflush(stdout);
+	scanf("%d",&x);
+	printf("%d",factorial(x));
+
+
+
+return 0;
+}
+--------------------------------------------------------------------------
+
+Question (3): (couldn't figure it out with recrusion)
+---------------
+#include <stdio.h>
+#include <stdlib.h>
+
+void reverse (char arr[])
+{
+	printf("the string entered : %s\n",arr);
+	int sum = 0;
+	int c = 0;
+	char cpy [50];
+
+	for (int i=0;arr[i]!=0;i++)
+	{ sum ++;
+	}
+
+	for(int j=sum;j>0;j--)
+	{
+		cpy[c]=arr[j-1];
+		c++;
+	}
+	cpy [sum]=0;
+	printf("the reverse is : %s\n",cpy);
+}
+int main()
+
+{
+	char x [50];
+	gets(x);
+	reverse(x);
+
+
+return 0;
+}
+-------------------------------------------------------------------------------------
+Question(4):
+--------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int power (int a , int b)
+{
+	int pw;
+	if (b!=0)
+	pw= a*pow(a,--b);
+	return pw;
+}
+
+int main()
+
+{
+	int x,y;
+	scanf("%d",&x);
+	scanf ("%d",&y);
+	printf("%d",power(x,y));
+
+return 0;
+}
+
+-----------------------------------------------------------------------------
