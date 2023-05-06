@@ -1,3 +1,7 @@
+#ifndef MY_PTYPES_H_
+#define MY_PTYPES_H_
+
+
 typedef char Int8_t; 
 typedef unsigned char Uint8_t;
 
@@ -21,3 +25,5 @@ typedef volatile Uint32_t Vuint32_t;
 
 typedef volatile Int64_t Vint64_t;
 typedef volatile Uint64_t Vuint64_t;
+
+#endif 
